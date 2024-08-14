@@ -11,6 +11,7 @@ type IProps = {
 }
 
 const NavLinkGenres: FC<IProps> = ({path, children, isActive, onClick}) => {
+
     const router = useRouter();
 
     const genre = () => {
@@ -28,3 +29,4 @@ const NavLinkGenres: FC<IProps> = ({path, children, isActive, onClick}) => {
 };
 
 export default NavLinkGenres;
+
