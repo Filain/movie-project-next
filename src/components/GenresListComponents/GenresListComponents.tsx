@@ -1,18 +1,29 @@
-import {genreService} from "@/services/genreService";
+'use client'
 
-export default async function GenresListComponents()  {
-    const genres = await genreService.getAll()
-    console.log(genres)
+import NavLinkGenres from "@/components/GenresListComponents/NavLinkGenres/NavLinkGenres";
+import {IGenreList} from "@/interfases/genresInterfase";
+import {FC, PropsWithChildren, useState} from "react";
+
+interface IProps extends PropsWithChildren {
+    genres: IGenreList
+}
+
+const GenresListComponents: FC<IProps> = ({genres}) => {
+    const [activePath, setActivePath] = useState<string | null>(null); // Стейт для збереження активного шляху
+
     return (
         <ul>
             {genres.genres.map((genre) => (
-                <li key={genre.id}>{genre.name}</li>
+                <li key={genre.id}>
+                    <NavLinkGenres path={`${genre.id}`}>{genre.name}</NavLinkGenres>
+                </li>
             ))}
-            {/*{genres.genres.map((genre) => (*/}
-            {/*    <li key={genre.id}>{genre.name}</li>*/}
-            {/*))}*/}
         </ul>
     );
 };
+
+export {GenresListComponents};
+
+
 
 

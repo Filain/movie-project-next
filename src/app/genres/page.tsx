@@ -1,12 +1,17 @@
 import {genreService} from "@/services/genreService";
-import GenresListComponents from "@/components/GenresListComponents/GenresListComponents";
+
+import {IGenreList} from "@/interfases/genresInterfase";
+import {GenresListComponents} from "@/components/GenresListComponents/GenresListComponents";
 
 export default async function Genres() {
+    const genres: IGenreList = await genreService.getAll()
 
-    // console.log('i am in genres page')
+
+    console.log('i am in genres page', genres)
+
     return (
         <div>
-            <GenresListComponents/>
+            <GenresListComponents genres={genres}/>
         </div>
     );
 }
