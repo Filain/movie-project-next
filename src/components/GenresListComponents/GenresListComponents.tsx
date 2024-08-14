@@ -16,9 +16,9 @@ const GenresListComponents: FC<IProps> = ({genres}) => {
             {genres.genres.map((genre) => (
                 <li key={genre.id}>
                     <NavLinkGenres
-                        path={`${genre.name}`}
-                        isActive={activePath === genre.name}
-                        onClick={() => setActivePath(genre.name)}>
+                        path={`${genre.id}`}
+                        isActive={activePath === `${genre.id}`}
+                        onClick={() => setActivePath(`${genre.id}`)}>
                         {genre.name}
                     </NavLinkGenres>
                 </li>

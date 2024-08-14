@@ -4,7 +4,7 @@ import {IData} from "@/interfases/movieInterfase";
 
 const options: RequestInit = {
     cache: 'force-cache',
-    next: {revalidate: 3600}, // 1 hour
+    // next: {revalidate: 3600}, // 1 hour
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',

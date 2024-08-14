@@ -1,7 +1,6 @@
 'use client'
 import {FC, PropsWithChildren, useCallback} from "react";
 import {usePathname, useRouter, useSearchParams} from "next/navigation";
-import {log} from "node:util";
 
 interface IProps extends PropsWithChildren {
 
@@ -22,7 +21,7 @@ const PaginationsComponent: FC<IProps> = () => {
         [searchParams]
     )
 
-    if(!currentPage){
+    if (!currentPage) {
         router.push(pathname + '?' + createQueryString('page', '1'))
     }
 
@@ -36,9 +35,9 @@ const PaginationsComponent: FC<IProps> = () => {
 
     return (
         <div>
-            <button onClick={prev} disabled={Number(currentPage)<=1}>prev</button>
+            <button onClick={prev} disabled={Number(currentPage) <= 1}>prev</button>
             {currentPage}
-            <button onClick={next} disabled={Number(currentPage)>=500} >next</button>
+            <button onClick={next} disabled={Number(currentPage) >= 500}>next</button>
         </div>
     );
 };

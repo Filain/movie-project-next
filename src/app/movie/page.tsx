@@ -10,10 +10,12 @@ export default function Movie() {
     const [movies, setMovies] = useState<IMovie[]>()
     const searchParams = useSearchParams()
 
+    const page = searchParams.get('page')||'1'
+    console.log('page', page)
 
     useEffect(() => {
-        movieService.getAll('1').then(data => setMovies(data.results))
-    }, []);
+        movieService.getAll(page).then(data => setMovies(data.results))
+    }, [page]);
 
 
     return (

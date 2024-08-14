@@ -5,8 +5,6 @@ import {PaginationsComponent} from "@/components/PaginationsComponent/Pagination
 
 interface IProps {
     movies?:  [] | IMovie[],
-    // page: string,
-    // setQuery: SetURLSearchParams
 }
 
 const MoviesComponent: FC<IProps> = ({movies}) => {
