@@ -14,9 +14,10 @@ type IProps = {
 const NavLinkClientComponent: FC<IProps> = ({path, children}) => {
 
     const pathname = usePathname();
+    // console.log(pathname)
     return (
-        <div>
-            <Link href={path} className={pathname === path ? 'active' : ''}>
+        <div className={styles.wrap}>
+            <Link href={path} className={pathname === path ? styles.active : ''}>
                 {children}
             </Link>
         </div>

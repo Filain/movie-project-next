@@ -1,9 +1,22 @@
+'use client'
+
+import MoviesComponent from "@/components/Movies/MoviesComponent";
+import {useEffect, useState} from "react";
+import {IMovie} from "@/interfases/movieInterfase";
 import {movieService} from "@/services/movieService";
 
-
 export default function Movie() {
-    movieService.getAll('1').then(data=>console.log(data))
+    const [movies, setMovies] = useState<IMovie[]>()
+
+    useEffect(() => {
+        movieService.getAll('1').then(data => setMovies(data.results))
+    }, []);
+
+
     return (
-        <div>Movie</div>
+        <div>
+            <MoviesComponent movies={movies}/>
+        </div>
     );
 }
+

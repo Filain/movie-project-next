@@ -17,7 +17,4 @@ const urls = {
     search:`${baseURL}${search}${movie}`
 }
 
-
-
-
 export {urls}

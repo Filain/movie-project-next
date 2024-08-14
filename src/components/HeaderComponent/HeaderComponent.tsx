@@ -1,12 +1,12 @@
-import {movieService} from "@/services/movieService";
-import Link from "next/link";
-import NavLinkClientComponent from "@/components/NavLinkClientComponent/NavLinkClientComponent";
+import NavLinkClientComponent from "@/components/HeaderComponent/NavLinkClientComponent/NavLinkClientComponent";
 import Image from "next/image";
 
-export default function Header() {
+import styles from './HeaderComponent.module.css'
+
+export default function HeaderComponent() {
 
     return (
-        <header>
+        <header className={styles.header}>
             <p>The Movie Database</p>
             <nav>
                 <ul>
@@ -17,7 +17,7 @@ export default function Header() {
             </nav>
 
             <div>
-                <Image src={'../public/images/man.svg'} alt={'logo'} width={100} height={100}/>
+                <Image src={'/images/man.svg'} alt={'logo'} width={50} height={50}/>
             </div>
 
         </header>
