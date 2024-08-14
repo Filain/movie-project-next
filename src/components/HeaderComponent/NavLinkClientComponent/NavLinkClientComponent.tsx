@@ -17,7 +17,7 @@ const NavLinkClientComponent: FC<IProps> = ({path, children}) => {
     // console.log(pathname)
     return (
         <div className={styles.wrap}>
-            <Link href={path} className={pathname === path ? styles.active : ''}>
+            <Link href={path} className={(pathname === path ? styles.active : '') + ' ' + styles.link }>
                 {children}
             </Link>
         </div>

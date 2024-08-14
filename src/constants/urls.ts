@@ -7,6 +7,15 @@ const list ='/list'
 const search='/search'
 const discover='/discover'
 
+//home page
+const nowPlaying='/now_playing'
+const popular='/popular'
+const topRated='/top_rated'
+const upcoming='/upcoming'
+
+
+
+
 
 const urls = {
     movies:`${baseURL}${discover}${movie}`,
@@ -14,7 +23,14 @@ const urls = {
         byId:(id:number)=>`${baseURL}${movie}/${id}`
     },
     genre:`${baseURL}${genre}${movie}${list}`,
-    search:`${baseURL}${search}${movie}`
+    search:`${baseURL}${search}${movie}`,
+
+    //home page
+    nowPlaying:`${baseURL}${movie}${nowPlaying}`,
+    popular:`${baseURL}${movie}${popular}`,
+    topRated:`${baseURL}${movie}${topRated}`,
+    upcoming:`${baseURL}${movie}${upcoming}`,
+
 }
 
 export {urls}

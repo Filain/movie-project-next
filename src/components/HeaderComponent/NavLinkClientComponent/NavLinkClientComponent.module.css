@@ -5,10 +5,16 @@
 .active {
     color: red;
 
-    background-color: aqua;
+    background-color: #002aff;
 
-    border-bottom: 1px solid #002aff;
+    border: 1px solid #ff0000;
     font-weight: bold; /* Наприклад, ви можете підкреслити активне посилання */
-    color: red; /* Встановлює колір для активного посилання */
+padding: 5px;
 
+}
+
+.link {
+    text-decoration: none;
+
+    color: #1fed08;
 }

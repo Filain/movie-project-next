@@ -1,6 +1,6 @@
 'use client'
 import {FC} from "react";
-import {useRouter} from "next/navigation";
+import {useRouter, useSearchParams} from "next/navigation";
 import styles from "@/components/HeaderComponent/NavLinkClientComponent/NavLinkClientComponent.module.css";
 
 type IProps = {
@@ -13,12 +13,16 @@ type IProps = {
 const NavLinkGenres: FC<IProps> = ({path, children, isActive, onClick}) => {
 
     const router = useRouter();
+    const searchParams = useSearchParams()
 
     const genre = () => {
-        const query = new URLSearchParams(window.location.search);
-        query.set("genreId", path);
-        router.push(`?${query.toString()}`);
-        onClick(); // Виклик функції для оновлення активного шляху
+        // const query = new URLSearchParams(window.location.search);
+        if (searchParams) {
+            const query = new URLSearchParams(searchParams.toString());
+            query.set("genreId", path);
+            router.push(`?${query.toString()}`);
+            onClick(); // Виклик функції для оновлення активного шляху
+        }
     }
 
     return (

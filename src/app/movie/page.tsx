@@ -11,7 +11,6 @@ export default function Movie() {
     const searchParams = useSearchParams()
 
     const page = searchParams.get('page')||'1'
-    console.log('page', page)
 
     useEffect(() => {
         movieService.getAll(page).then(data => setMovies(data.results))

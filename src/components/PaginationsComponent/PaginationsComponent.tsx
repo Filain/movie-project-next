@@ -21,6 +21,8 @@ const PaginationsComponent: FC<IProps> = () => {
         [searchParams]
     )
 
+
+
     if (!currentPage) {
         router.push(pathname + '?' + createQueryString('page', '1'))
     }
@@ -37,7 +39,7 @@ const PaginationsComponent: FC<IProps> = () => {
         <div>
             <button onClick={prev} disabled={Number(currentPage) <= 1}>prev</button>
             {currentPage}
-            <button onClick={next} disabled={Number(currentPage) >= 500}>next</button>
+            <button onClick={next} disabled={Number(currentPage) >= 500 }>next</button>
         </div>
     );
 };

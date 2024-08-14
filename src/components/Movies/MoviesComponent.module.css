@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+
+
+.Wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border: 1px solid yellow;*/
+    min-height: 1440px;
+}
