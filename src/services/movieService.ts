@@ -1,7 +1,16 @@
 import {urls} from "@/constants/urls";
 import {IData} from "@/interfases/movieInterfase";
 import {IInfo} from "@/interfases/infoMovie";
-import {options} from "@/constants/fetchOptions";
+
+const options: RequestInit = {
+
+    next: {revalidate: 3600}, // 1 hour
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`
+    }
+}
 
 const movieService = {
     getAll: async (page: string): Promise<IData> => {

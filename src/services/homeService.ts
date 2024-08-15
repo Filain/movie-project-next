@@ -3,7 +3,7 @@ import {urls} from "@/constants/urls";
 import {IData} from "@/interfases/movieInterfase";
 
 const options: RequestInit = {
-    cache: 'force-cache',
+
     next: {revalidate: 3600}, // 1 hour
     method: 'GET',
     headers: {
