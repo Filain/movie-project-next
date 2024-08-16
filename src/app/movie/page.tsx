@@ -2,7 +2,7 @@
 
 import MoviesComponent from "@/components/Movies/MoviesComponent";
 import {useEffect, useState} from "react";
-import {IMovie} from "@/interfases/movieInterfase";
+import {IMovie} from "@/interfases/movieInterface";
 import {movieService} from "@/services/movieService";
 import {useSearchParams} from "next/navigation";
 

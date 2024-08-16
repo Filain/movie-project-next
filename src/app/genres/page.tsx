@@ -1,6 +1,6 @@
 import {genreService} from "@/services/genreService";
 
-import {IGenreList} from "@/interfases/genresInterfase";
+import {IGenreList} from "@/interfases/genresInterface";
 import {GenresListComponents} from "@/components/GenresListComponents/GenresListComponents";
 import {GenreMovieComponent} from "@/components/GenreMovieComponent/GenreMovieComponent";
 

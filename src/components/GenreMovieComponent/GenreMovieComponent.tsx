@@ -1,6 +1,6 @@
 'use client'
 import {FC, PropsWithChildren, useEffect, useState} from "react";
-import {IMovie} from "@/interfases/movieInterfase";
+import {IMovie} from "@/interfases/movieInterface";
 import {useSearchParams} from "next/navigation";
 import {genreService} from "@/services/genreService";
 import MoviesComponent from "@/components/Movies/MoviesComponent";

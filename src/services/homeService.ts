@@ -1,6 +1,6 @@
-import {IGenreList} from "@/interfases/genresInterfase";
+import {IGenreList} from "@/interfases/genresInterface";
 import {urls} from "@/constants/urls";
-import {IData} from "@/interfases/movieInterfase";
+import {IData} from "@/interfases/movieInterface";
 
 const options: RequestInit = {
 

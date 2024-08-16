@@ -1,6 +1,6 @@
 import {urls} from "@/constants/urls";
-import {IData} from "@/interfases/movieInterfase";
-import {IInfo} from "@/interfases/infoMovie";
+import {IData} from "@/interfases/movieInterface";
+import {IInfo} from "@/interfases/infoMovieInterface";
 
 const options: RequestInit = {
 

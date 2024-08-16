@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 import {searchService} from "@/services/searchService";
 import {useSearchParams} from "next/navigation";
 import MoviesComponent from "@/components/Movies/MoviesComponent";
-import {IMovie} from "@/interfases/movieInterfase";
+import {IMovie} from "@/interfases/movieInterface";
 
 interface ISearchInput {
     search: string

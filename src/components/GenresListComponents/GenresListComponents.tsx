@@ -1,7 +1,7 @@
 'use client'
 
 import NavLinkGenres from "@/components/GenresListComponents/NavLinkGenres/NavLinkGenres";
-import {IGenreList} from "@/interfases/genresInterfase";
+import {IGenreList} from "@/interfases/genresInterface";
 import {FC, PropsWithChildren, useState} from "react";
 
 interface IProps extends PropsWithChildren {

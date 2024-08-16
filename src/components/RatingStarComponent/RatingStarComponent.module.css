@@ -1,0 +1,27 @@
+/* Модульні стилі для Rating компонента */
+.starRating {
+    display: flex;
+    align-items: center;
+}
+
+.starRating__star {
+    display: inline-block;
+    font-size: 1.5em;
+    color: #ababab;
+    transition: color 0.2s ease-out;
+}
+
+.starRating__star.isSelected {
+    color: #ffd700;
+}
+
+.starRating__star.isHalf {
+    background: linear-gradient(90deg, #ffd700 50%, #ababab 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Курсор не змінюється */
+.starRating__star:hover {
+    cursor: default;
+}

@@ -1,5 +1,4 @@
 import {urls} from "@/constants/urls";
-import {IData} from "@/interfases/movieInterface";
 
 const options: RequestInit = {
 
@@ -10,10 +9,12 @@ const options: RequestInit = {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`
     }
 }
-const searchService = {
-    getBySearch: async (query: string, page: string): Promise<IData> => {
+
+const trailerService  = {
+
+    getAllById: async (id: string): Promise<any> => {
         try {
-            const res = await fetch(`${urls.search}?query=${query}&page=${page}`, options)
+            const res = await fetch(`${urls.trailer(id)}`, options)
             return res.json()
         } catch (error) {
             console.error("Unknown error:", error);
@@ -22,4 +23,4 @@ const searchService = {
     }
 }
 
-export {searchService}
+export {trailerService}

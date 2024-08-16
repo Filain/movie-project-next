@@ -1,7 +1,7 @@
 'use client'
 
 import {FC, PropsWithChildren} from "react";
-import {IMovie} from "@/interfases/movieInterfase";
+import {IMovie} from "@/interfases/movieInterface";
 
 import styles from './MovieComponent.module.css'
 import Image from "next/image";

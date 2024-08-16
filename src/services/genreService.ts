@@ -1,6 +1,6 @@
 import {urls} from "@/constants/urls";
-import {IGenreList} from "@/interfases/genresInterfase";
-import {IData} from "@/interfases/movieInterfase";
+import {IGenreList} from "@/interfases/genresInterface";
+import {IData} from "@/interfases/movieInterface";
 
 const options: RequestInit = {
     cache: 'force-cache',

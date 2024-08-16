@@ -1,4 +1,4 @@
-import {IMovie} from "@/interfases/movieInterfase";
+import {IMovie} from "@/interfases/movieInterface";
 import {FC} from "react";
 import {MovieComponent} from "@/components/Movies/MovieComponent/MovieComponent";
 import {PaginationsComponent} from "@/components/PaginationsComponent/PaginationsComponent";
