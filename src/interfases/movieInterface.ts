@@ -22,3 +22,36 @@ export interface IMovie {
     vote_average: number
     vote_count: number
 }
+
+export interface INowPlaying {
+    dates: {
+        maximum: string
+        minimum: string
+    }
+    page: number
+    results: IMovie[]
+    total_pages: number
+    total_results: number
+}
+
+export interface IPopular {
+    page: number
+    results: IMovie[]
+    total_pages: number
+    total_results: number
+}
+
+export interface ITopRated {
+    page: number
+    results: IMovie[]
+    total_pages: number
+    total_results: number
+}
+
+export interface IUpcoming {
+    page: number
+    results: IMovie[]
+    total_pages: number
+    total_results: number
+}
+

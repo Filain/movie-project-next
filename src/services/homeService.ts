@@ -1,6 +1,6 @@
 import {IGenreList} from "@/interfases/genresInterface";
 import {urls} from "@/constants/urls";
-import {IData} from "@/interfases/movieInterface";
+import {IData, INowPlaying, IPopular, ITopRated, IUpcoming} from "@/interfases/movieInterface";
 
 const options: RequestInit = {
 
@@ -13,7 +13,7 @@ const options: RequestInit = {
 }
 
 const homeService={
-    getNowPlaying: async (): Promise<IGenreList> => {
+    getNowPlaying: async (): Promise<INowPlaying> => {
         try {
             // console.log("Sending request to:", `${urls.genre}`);
             // console.log("With options:", options);
@@ -25,7 +25,7 @@ const homeService={
             throw new Error("An unknown error occurred");
         }
     },
-    getPopular: async (): Promise<IGenreList> => {
+    getPopular: async (): Promise<IPopular> => {
         try {
             // console.log("Sending request to:", `${urls.genre}`);
             // console.log("With options:", options);
@@ -37,7 +37,7 @@ const homeService={
             throw new Error("An unknown error occurred");
         }
     },
-    getTopRated: async (): Promise<IGenreList> => {
+    getTopRated: async (): Promise<ITopRated> => {
         try {
             // console.log("Sending request to:", `${urls.genre}`);
             // console.log("With options:", options);
@@ -49,7 +49,7 @@ const homeService={
             throw new Error("An unknown error occurred");
         }
     },
-    getUpcoming: async (): Promise<IGenreList> => {
+    getUpcoming: async (): Promise<IUpcoming> => {
         try {
             // console.log("Sending request to:", `${urls.genre}`);
             // console.log("With options:", options);

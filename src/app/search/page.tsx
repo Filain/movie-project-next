@@ -3,6 +3,7 @@ import SearchFormComponent from "@/components/SearchFormComponent/SearchFormComp
 
 export default function Search() {
     return (
-        <div><SearchFormComponent/></div>
+        <div>
+        <SearchFormComponent/></div>
     );
 }

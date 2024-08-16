@@ -2,17 +2,22 @@ import NavLinkClientComponent from "@/components/HeaderComponent/NavLinkClientCo
 import Image from "next/image";
 
 import styles from './HeaderComponent.module.css'
+import Link from "next/link";
 
 export default function HeaderComponent() {
 
     return (
         <header className={styles.header}>
-            <p>The Movie Database</p>
+            <Link href={'/'}  className={styles.logo}>The Movie Database</Link>
             <nav>
                 <ul>
+                    <li><NavLinkClientComponent path={'/now_playing'}>Now Playing</NavLinkClientComponent></li>
+                    <li><NavLinkClientComponent path={'/popular'}>Popular</NavLinkClientComponent></li>
+                    <li><NavLinkClientComponent path={'/top_rated'}>Top Rated</NavLinkClientComponent></li>
+                    <li><NavLinkClientComponent path={'/upcoming'}>Upcoming</NavLinkClientComponent></li>
                     <li><NavLinkClientComponent path={'/movie'}>Movie</NavLinkClientComponent></li>
-                    <li><NavLinkClientComponent path={'/search'}>Search</NavLinkClientComponent></li>
                     <li><NavLinkClientComponent path={'/genres'}>Genres</NavLinkClientComponent></li>
+
                 </ul>
             </nav>
 
