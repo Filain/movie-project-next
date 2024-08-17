@@ -1,7 +1,8 @@
 'use client'
 import {FC} from "react";
 import {useRouter, useSearchParams} from "next/navigation";
-import styles from "@/components/HeaderComponent/NavLinkClientComponent/NavLinkClientComponent.module.css";
+
+import styles from './NavLinklGenres.module.css'
 
 type IProps = {
     path: string,
@@ -28,9 +29,10 @@ const NavLinkGenres: FC<IProps> = ({path, children, isActive, onClick}) => {
     }
 
     return (
-        <div className={`${styles.wrap} ${Active ? styles.active : ''}`}>
-            <button onClick={genre}>{children}</button>
-        </div>
+
+            <button onClick={genre} className={`${styles.wrap} ${Active ? styles.active : ''}`}>{children} </button>
+
+
     );
 };
 

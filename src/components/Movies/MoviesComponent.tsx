@@ -12,14 +12,14 @@ interface IProps {
 const MoviesComponent: FC<IProps> = ({movies}) => {
 
     return (
-        <>
-        <div className={styles.Wrap}>
+        <div className={styles.wrap}>
+        <div className={styles.movies}>
             {movies && movies.map(movie => <MovieComponent key={movie.id} movie={movie}/>
             )}
 
         </div>
             <PaginationsComponent/>
-        </>
+        </div>
     )
 }
 

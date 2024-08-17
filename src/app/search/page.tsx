@@ -1,9 +1,29 @@
-import SearchFormComponent from "@/components/SearchFormComponent/SearchFormComponent";
+'use client'
+
+import MoviesComponent from "@/components/Movies/MoviesComponent";
+import {useEffect, useState} from "react";
+import {IMovie} from "@/interfases/movieInterface";
+import {movieService} from "@/services/movieService";
+import {useSearchParams} from "next/navigation";
+import {searchService} from "@/services/searchService";
+
+export default function Movie() {
+    const [movies, setMovies] = useState<IMovie[]>()
+    const searchParams = useSearchParams()
+
+    const page = searchParams.get('page')||'1'
+
+    const query = searchParams.get('query')||''
+
+    useEffect(() => {
+        searchService.getBySearch(query, page).then(data => setMovies(data.results))
+    }, [page, query]);
 
 
-export default function Search() {
     return (
         <div>
-        <SearchFormComponent/></div>
+            <MoviesComponent movies={movies}/>
+        </div>
     );
 }
+

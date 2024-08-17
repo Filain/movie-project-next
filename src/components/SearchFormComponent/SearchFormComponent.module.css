@@ -1,0 +1,33 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button {
+    background-color: transparent; /* Прозорий фон */
+    border: none; /* Видалити рамку */
+    cursor: pointer; /* Зміна курсора на "pointer" */
+    padding: 5px; /* Видалити відступи */
+    transition: transform 0.3s ease; /* Плавний перехід */
+    /*display: flex; !* Використання Flexbox для вирівнювання *!*/
+    /*align-items: center; !* Вирівнювання по вертикалі *!*/
+    /*justify-content: center; !* Вирівнювання по горизонталі *!*/
+}
+
+.button:hover {
+    transform: scale(1.1); /* Збільшення зображення при наведенні */
+}
+
+.button:active {
+    transform: scale(0.9); /* Зменшення зображення при натисканні */
+}
+
+.input {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}

@@ -2,6 +2,8 @@
 import {FC, PropsWithChildren, useCallback} from "react";
 import {usePathname, useRouter, useSearchParams} from "next/navigation";
 
+import styles from './PaginationsComponent.module.css'
+
 interface IProps extends PropsWithChildren {
 
 }
@@ -36,10 +38,10 @@ const PaginationsComponent: FC<IProps> = () => {
 
 
     return (
-        <div>
-            <button onClick={prev} disabled={Number(currentPage) <= 1}>prev</button>
-            {currentPage}
-            <button onClick={next} disabled={Number(currentPage) >= 500 }>next</button>
+        <div className={styles.wrap}>
+            <button onClick={prev} className={styles.button} disabled={Number(currentPage) <= 1}>PREV</button>
+            <p className={styles.page}>{currentPage}</p>
+            <button onClick={next} className={styles.button} disabled={Number(currentPage) >= 500 }>NEXT</button>
         </div>
     );
 };

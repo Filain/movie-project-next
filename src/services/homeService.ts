@@ -1,6 +1,5 @@
-import {IGenreList} from "@/interfases/genresInterface";
 import {urls} from "@/constants/urls";
-import {IData, INowPlaying, IPopular, ITopRated, IUpcoming} from "@/interfases/movieInterface";
+import {INowPlaying, IPopular, ITopRated, IUpcoming} from "@/interfases/movieInterface";
 
 const options: RequestInit = {
 
@@ -12,12 +11,12 @@ const options: RequestInit = {
     }
 }
 
-const homeService={
-    getNowPlaying: async (): Promise<INowPlaying> => {
+const homeService = {
+    getNowPlaying: async (page: string): Promise<INowPlaying> => {
         try {
             // console.log("Sending request to:", `${urls.genre}`);
             // console.log("With options:", options);
-            const res = await fetch(`${urls.nowPlaying}`, options)
+            const res = await fetch(`${urls.nowPlaying}?page=${page}`, options)
             // console.log("Response received:", res);
             return await res.json()
         } catch (error) {
@@ -25,11 +24,11 @@ const homeService={
             throw new Error("An unknown error occurred");
         }
     },
-    getPopular: async (): Promise<IPopular> => {
+    getPopular: async (page: string): Promise<IPopular> => {
         try {
             // console.log("Sending request to:", `${urls.genre}`);
             // console.log("With options:", options);
-            const res = await fetch(`${urls.popular}`, options)
+            const res = await fetch(`${urls.popular}?page=${page}`, options)
             // console.log("Response received:", res);
             return await res.json()
         } catch (error) {
@@ -37,11 +36,11 @@ const homeService={
             throw new Error("An unknown error occurred");
         }
     },
-    getTopRated: async (): Promise<ITopRated> => {
+    getTopRated: async (page: string): Promise<ITopRated> => {
         try {
             // console.log("Sending request to:", `${urls.genre}`);
             // console.log("With options:", options);
-            const res = await fetch(`${urls.popular}`, options)
+            const res = await fetch(`${urls.topRated}?page=${page}`, options)
             // console.log("Response received:", res);
             return await res.json()
         } catch (error) {
@@ -49,11 +48,11 @@ const homeService={
             throw new Error("An unknown error occurred");
         }
     },
-    getUpcoming: async (): Promise<IUpcoming> => {
+    getUpcoming: async (page: string): Promise<IUpcoming> => {
         try {
             // console.log("Sending request to:", `${urls.genre}`);
             // console.log("With options:", options);
-            const res = await fetch(`${urls.upcoming}`, options)
+            const res = await fetch(`${urls.upcoming}?page=${page}`, options)
             // console.log("Response received:", res);
             return await res.json()
         } catch (error) {

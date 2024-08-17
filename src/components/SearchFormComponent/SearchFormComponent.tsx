@@ -1,44 +1,39 @@
 'use client'
 
 import {SubmitHandler, useForm} from "react-hook-form";
-import {useEffect, useState} from "react";
-import {searchService} from "@/services/searchService";
-import {useSearchParams} from "next/navigation";
-import MoviesComponent from "@/components/Movies/MoviesComponent";
-import {IMovie} from "@/interfases/movieInterface";
+import {useRouter} from "next/navigation";
+
+import styles from './SearchFormComponent.module.css'
+import Image from "next/image";
 
 interface ISearchInput {
     search: string
 }
 
 export default function SearchFormComponent() {
-    const [query, setQuery] = useState<string>('')
-    const searchParams = useSearchParams()
+    const router = useRouter()
+
     const {register, handleSubmit, reset} = useForm<ISearchInput>()
-
-    const page = searchParams.get('page') || '0'
-    const [movies, setMovies] = useState<IMovie[]>()
-    useEffect(() => {
-        searchService.getBySearch(query, page).then(data => setMovies(data.results))
-    }, [page, query]);
-
-
 
 
     const onSubmit: SubmitHandler<ISearchInput> = async (data) => {
-        setQuery(data.search)
-        reset()
+        if (data.search) {
+            await router.push('/search?query=' + data.search)
+            reset()
+        }
     }
 
 
-
     return (
-<div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <input {...register('search')}/>
-            <button>Search</button>
+
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+            <input {...register('search')} placeholder={'search'} className={styles.input}/>
+            <button className={styles.button}>
+                {/*<div className={styles.imageContainer}>*/}
+                <Image src={'/images/search.svg'} alt={'search'} width={28} height={28}/>
+                {/*</div>*/}
+            </button>
         </form>
-    <MoviesComponent movies={movies}/>
-</div>
+
     );
 };

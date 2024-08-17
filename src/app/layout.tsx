@@ -18,7 +18,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
     <html lang="en">
       <body className={inter.className}>
       <HeaderComponent/>
-      {/*<ParallaxComponentServer/>*/}
+      <ParallaxComponentServer/>
       {children}
 
       </body>

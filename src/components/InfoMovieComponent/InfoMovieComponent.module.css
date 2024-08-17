@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
 
 .title {
-    font-family: 'Alumni Sans Inline One', cursive;
-    font-size: 50px;
+    font-family: var(--font-header), cursive;
+    font-size: var(--font-size-header);
 }
 
 .wrap {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-top: calc(var(--heder-height) + var(--parallax-height) + 20px);
 }
 
 /*p {*/
@@ -21,12 +20,12 @@
 /*}*/
 
 .link {
+    padding-right: 10px;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif;
-    font-size: 20px;
+    font-size: var(--font-size-paragraph);
     cursor: pointer;
     color: black;
-    word-spacing: 15px;
 }
 
 .link:hover {

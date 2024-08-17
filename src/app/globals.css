@@ -1,7 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   --wrap-width: 1440px;
   --heder-height: 60px;
   --parallax-height: 400px;
+  --parallax-background-colour:rgba(255, 255, 255, 0.3);
+
+
+
+  --border-radius: 5px;
+
+   /*fonts*/
+  --font-header: 'Alumni Sans Inline One';
+  --font-title: 'Exo 2';
+  --font-text: 'Exo 2';
+  --font-botton: 'Exo 2';
+
+
+  --font-size-header: 50px;
+  --font-size-title: 30px;
+  --font-size-text: 16px;
+  --font-size-button: 25px;
+
+  /*light mode*/
+  --color-background-light: #FFFFFF;
+  --color-text-header-light: #000000;
+  --color-title-title-light: #000000;
+  --color-text-text-light: #000000;
+
+  --color-text-shadow-light: 2px 2px 4px rgba(255, 255, 255, 0.8);
+
+  --color-text-fon-light:rgba(255, 255, 255, 0.3);
+
+  --color-line-light: #000000;
+
+  --color-text-button-light: white;
+  --color-background-button-light: #007bff ;
+
+  --color-background-button-hover-light: #0069d9;
+
+  /*dark mode*/
+
+  /*button */
+
+
 
 }
 
@@ -81,11 +130,7 @@
 /*  }*/
 /*}*/
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+
 
 /*html,*/
 /*body {*/

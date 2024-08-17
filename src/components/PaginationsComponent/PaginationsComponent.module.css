@@ -1,0 +1,41 @@
+.wrap {
+    width: var(--wrap-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--heder-height);
+
+}
+
+.page {
+    margin: 0 10px;
+    font-size: var(--font-size-button);
+    font-family: var(--font-botton), sans-serif;
+    color: var(--color-title-title-light);
+}
+
+.button {
+    font-family: var(--font-botton), sans-serif;
+    background-color: var(--color-background-button-light); /* Основний колір кнопки */
+    color: var(--color-text-button-light); /* Колір тексту */
+    border: 1px solid #ccc; /* Відсутність обведення */
+    padding: 5px 10px; /* Внутрішній відступ */
+    font-size: var(--font-size-button); /* Розмір шрифту */
+    border-radius: var(--border-radius); /* Скруглені кути */
+    cursor: pointer; /* Зміна курсору на pointer */
+    overflow: hidden; /* Приховування тексту, що не вміщується */
+    white-space: nowrap; /* Заборона переносу тексту */
+    transition: background-color 0.3s ease; /* Анімація зміни кольору */
+}
+
+.button:hover {
+    background-color: var(--color-background-button-hover-light); /* Зміна кольору при ховері */
+}
+
+.button:disabled {
+    background-color: #d3d3d3; /* Світліший колір для неактивної кнопки */
+    color: #888888; /* Світліший текст */
+    border: 1px solid #bbb; /* Світліше обведення */
+    cursor: not-allowed; /* Відображення курсору "не дозволено" */
+    opacity: 0.6; /* Прозорість для позначення неактивності */
+}

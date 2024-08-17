@@ -1,4 +1,5 @@
 .header {
+
     position: fixed; /* Фіксуємо хедер */
     width: 100%;
     height: 60px;
@@ -6,9 +7,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.56);
     color: #fff;
-    z-index: 1000; /* Переконайтесь, що хедер поверх всіх інших елементів */
+    z-index: 100; /* Переконайтесь, що хедер поверх всіх інших елементів */
     box-sizing: border-box; /* Ураховує padding у висоті */
 }
 

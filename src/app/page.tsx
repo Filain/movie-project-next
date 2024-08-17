@@ -4,10 +4,12 @@ import {MovieComponent} from "@/components/Movies/MovieComponent/MovieComponent"
 import style from './page.module.css'
 
 export default async function Home() {
-    const nowPlaying = await homeService.getNowPlaying()
-    const popular = await homeService.getPopular()
-    const topRated = await homeService.getTopRated()
-    const upcoming = await homeService.getUpcoming()
+
+
+    const nowPlaying = await homeService.getNowPlaying('1')
+    const popular = await homeService.getPopular('1')
+    const topRated = await homeService.getTopRated('1')
+    const upcoming = await homeService.getUpcoming('1')
 
     const countOfmovies = 5
 
