@@ -1,21 +1,26 @@
 .header {
-
     position: fixed; /* Фіксуємо хедер */
     width: 100%;
     height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
-    background-color: rgba(51, 51, 51, 0.56);
-    color: #fff;
+    background-color: var(--color-background-button-light);
     z-index: 100; /* Переконайтесь, що хедер поверх всіх інших елементів */
     box-sizing: border-box; /* Ураховує padding у висоті */
 }
 
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--wrap-width);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 .header nav ul {
     list-style-type: none;
-    /*list-style: none;*/
     margin: 0;
     padding: 0;
 }
@@ -27,9 +32,11 @@
 }
 
 .logo {
-
-        text-decoration: none;
-
-        color: #1fed08;
+    text-decoration: none;
+    font-family: var(--font-botton), sans-serif;
+    font-weight: bold;
+    font-size: var(--font-size-button);
+    cursor: pointer;
+    color: var(--color-text-button-light);
 
 }

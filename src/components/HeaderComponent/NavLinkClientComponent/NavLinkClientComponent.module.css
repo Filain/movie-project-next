@@ -1,20 +1,22 @@
 .wrap {
-/*background-color: red;*/
+    box-sizing: border-box;
 }
 
 .active {
-    color: red;
 
-    background-color: #002aff;
+    font-family: var(--font-botton), sans-serif;
+    font-size: var(--font-size-button);
+    text-shadow: var(--color-text-shadow-dark);
 
-    border: 1px solid #ff0000;
-    font-weight: bold; /* Наприклад, ви можете підкреслити активне посилання */
-padding: 5px;
+    font-weight: 800;
 
 }
 
 .link {
     text-decoration: none;
-
-    color: #1fed08;
+    font-family: var(--font-botton), sans-serif;
+    font-size: var(--font-size-button);
+    cursor: pointer;
+    color: var(--color-text-button-light);
 }
+

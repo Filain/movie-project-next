@@ -32,8 +32,10 @@ const ParallaxComponentClient: FC<IProps> = ({ nowPlaying }) => {
 
     return (
         <div className={styles.wrap}>
-            <div></div>
-            <p className={styles.title}>{movies[posterIndex]?.original_title}</p>
+            <div className={styles.titleBox}>
+                <p className={`${styles.title} ${styles.fadessIn}`}>{movies[posterIndex]?.original_title}</p>
+            </div>
+
             {movies.length > 0 && (
                 <div className={styles.imageWrapper}>
                     <Image

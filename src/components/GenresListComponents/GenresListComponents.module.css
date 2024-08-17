@@ -4,13 +4,20 @@
     left: 0; /* закріплює компонент до лівого краю */
     right: 0; /* розтягує компонент по ширині на всю сторінку */
     z-index: 1000; /* забезпечує, що компонент буде на передньому плані */
-    background-color: white; /* додає фон, щоб контент під ним не просвічувався */
+    background-color: var(--color-background-button-light); /* додає фон, щоб контент під ним не просвічувався */
     padding: 10px; /* додає відступи навколо компоненту */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* додає легку тінь для кращої видимості */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* додає легку тінь для кращої видимості */
+    animation: genreListAnimation 0.5s ease-in-out; /* Анімація появи */
+    animation-fill-mode: forwards;
+    display: flex; /* робить всі елементи списку в один рядок */
+    align-items: center;
+    justify-content: center;
 }
 
 .genreListItems {
+    width: var(--wrap-width);
     display: flex; /* робить всі елементи списку в один рядок */
+    justify-content: space-between;
     list-style: none; /* прибирає маркери зі списку */
     padding: 0; /* прибирає відступи */
     margin: 0; /* прибирає відступи */
@@ -22,4 +29,16 @@
 
 .genreListItem:last-child {
     margin-right: 0; /* прибирає відступ для останнього елементу */
+}
+
+/* Анімація  */
+@keyframes genreListAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(1); /* Злегка збільшена */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Повертається до нормального розміру */
+    }
 }

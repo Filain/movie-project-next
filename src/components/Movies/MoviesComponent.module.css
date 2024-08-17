@@ -11,7 +11,7 @@
 }
 
 .movies{
-    padding-top:  calc(var(--heder-height) + var(--parallax-height) + 10px);
+    padding-top:  calc(30px + 20px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

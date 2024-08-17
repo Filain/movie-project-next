@@ -9,7 +9,8 @@ export default function HeaderComponent() {
 
     return (
         <header className={styles.header}>
-            <Link href={'/'}  className={styles.logo}>The Movie Database</Link>
+            <div className={styles.wrap}>
+            <Link href={'/'}  className={styles.logo}>MovieD</Link>
             <nav>
                 <ul>
                     <li><NavLinkClientComponent path={'/now_playing'}>Now Playing</NavLinkClientComponent></li>
@@ -30,6 +31,7 @@ export default function HeaderComponent() {
 
             <div>
                 <Image src={'/images/man.svg'} alt={'logo'} width={50} height={50}/>
+            </div>
             </div>
 
         </header>
