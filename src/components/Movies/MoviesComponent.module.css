@@ -16,7 +16,6 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-    max-width: 1440px;
+    max-width: var(--wrap-width);
 
-    /*border: 1px solid red;*/
 }

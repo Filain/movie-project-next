@@ -41,18 +41,21 @@ export default function InfoMovieComponent() {
 
     return (
         <div className={styles.wrap}>
-            <div className={styles.title}>{title}</div>
-            <Rating rating={vote_average}/>
+            <h2 className={styles.header}>{title}</h2>
+
 
             <div className={styles.block}>
                 <div className={styles.miniBlock}>
-                    <Image src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-                           alt={title} width={500} height={500}/>
+                    {poster_path
+                        ?<Image src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} width={600} height={880}/>
+                        : <Image src={'/images/notFound.svg'} alt={'Image not found '} width={600} height={880}/>
+                    }
+
                 </div>
                 <div className={styles.miniBlock}>
-                    <p>rating</p>
-
-                    <p>genres</p>
+                    <p className={styles.title}>rating</p>
+                    <Rating rating={vote_average}/>
+                    <p className={styles.title}>genres</p>
                     <div className={styles.text}>{
                         genres?.map((genre) =>
                             <Link href={`/genres?page=1&genreId=${genre.id}`}
@@ -60,19 +63,20 @@ export default function InfoMovieComponent() {
                                   key={genre.id}>
                                 {genre.name}
                             </Link>)}</div>
-                    <p>runtime</p>
+                    <p className={styles.title}>runtime</p>
                     <div className={styles.text}>{runtime} min</div>
-                    <p>release date</p>
+                    <p className={styles.title}>release date</p>
                     <div className={styles.text}>{release_date}</div>
+                    <p className={styles.title}>overview</p>
+
+                    <div className={styles.text}>{overview}</div>
                 </div>
             </div>
-            <p>overview</p>
 
-            <div className={styles.text}>{overview}</div>
             {teaserKey ? <div>
-                <h4>Teaser:</h4>
+                <p className={`${styles.title} ${styles.senter}`}>Teaser</p>
 
-                <iframe width="1400" height="790"
+                <iframe width="1430" height="720"
                         src={`https://www.youtube.com/embed/${teaser[0]?.key}`}
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -81,7 +85,7 @@ export default function InfoMovieComponent() {
             </div> : null}
 
 
-            <h4>Main Cast:</h4>
+            <p className={`${styles.title} ${styles.senter}`}>Main Cast</p>
             <div className={styles.block}>
                 {characters?.map(char => <CharactersListComponent key={char.id} char={char}/>)}
             </div>

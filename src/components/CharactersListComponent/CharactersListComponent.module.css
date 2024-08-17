@@ -1,0 +1,28 @@
+.wrap {
+    width: 90px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.image {
+    width: 80px;
+    height: 100px;
+    border-radius: var(--border-radius);
+}
+
+.text {
+    padding: 5px;
+    /*white-space: nowrap; !* Забороняє переносити текст на новий рядок *!*/
+    overflow: hidden; /* Приховує текст, що не вміщується */
+    text-overflow: ellipsis; /* Додає трикрапку, якщо текст не вміщується */
+    max-width: 100%; /* Максимальна ширина тексту */
+}
+
+.imageNot {
+    width: 60px;
+    height: 100px;
+    border-radius: var(--border-radius);
+}

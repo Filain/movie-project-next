@@ -1,31 +1,37 @@
 .wrap {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-top: 60px;
+    width: 100%; /* Робить контейнер повної ширини */
 
 }
 
 .moviesLine {
-    border: 1px solid var(--color-background-button-light);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+
+
     height: var(--mainPageBlock-height);
     width: var(--wrap-width);
     border-radius: var(--border-radius);
-    margin: 40px 0;
+    border: 1px solid var(--color-background-button-light);
+
+
+
+
+
 }
 
 .tytle {
     text-decoration: none;
 
     position: relative;
-    top: calc(-1 * var(--mainPageBlock-height)/2);
-    right: -1300px;
+    top: 16px;
+    right: -630px;
 
     font-family: var(--font-botton), sans-serif;
     background-color: var(--color-background-button-light); /* Основний колір кнопки */
@@ -38,7 +44,6 @@
     overflow: hidden; /* Приховування тексту, що не вміщується */
     white-space: nowrap; /* Заборона переносу тексту */
     transition: background-color 0.3s ease; /* Анімація зміни кольору */
-
-}
+    }
 
 

@@ -23,15 +23,15 @@ const MovieComponent: FC<IProps> = ({movie}) => {
         <div className={styles.Movie} onClick={nav}>
             <div>{poster_path ?
                 <Image className={styles.img_poster} src={`https://image.tmdb.org/t/p/w200${poster_path}`}
-                       alt={original_title} width={150} height={200}/>
+                       alt={original_title} width={200} height={300}/>
                 :
-                <Image className={styles.img_poster} src={'/images/notFound.png'} alt={'Image not found '} width={150}
-                       height={200}/>}
+                <Image className={styles.img_poster} src={'/images/notFound.svg'} alt={'Image not found '} width={200}
+                       height={300}/>}
 
             </div>
 
 
-            <p className={styles.title}>{original_title}</p>
+            {/*<p className={styles.title}>{original_title}</p>*/}
         </div>
     );
 };

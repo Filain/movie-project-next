@@ -22,22 +22,23 @@ export default async function Home() {
 
     return (
         <div className={style.wrap}>
+            <Link href={'/now_playing'} className={style.tytle}>NowPlaying</Link>
             <div className={style.moviesLine}>
-                <Link href={'/now_playing'} className={style.tytle} >NowPlaying</Link>
                 {nowPlayingMovies.map(movie =>
                     <MovieComponent key={movie.id} movie={movie}/>)}</div>
-                <div className={style.moviesLine}>
-                    <Link href={'/now_playing'} className={style.tytle} >Popular</Link>
-                    {popularMovies.map(movie =>
-                        <MovieComponent key={movie.id} movie={movie}/>)}</div>
-                <div className={style.moviesLine}>
-                    <Link href={'/now_playing'} className={style.tytle} >Top Rated</Link>
-                    {topRatedMovies.map(movie =>
-                        <MovieComponent key={movie.id} movie={movie}/>)}</div>
-                <div className={style.moviesLine}>
-                    <Link href={'/now_playing'} className={style.tytle} >Upcoming</Link>
-                    {upcomingMovies.map(movie =>
-                        <MovieComponent key={movie.id} movie={movie}/>)}</div>
+            <Link href={'/now_playing'} className={style.tytle}>Popular</Link>
+            <div className={style.moviesLine}>
+                {popularMovies.map(movie =>
+                    <MovieComponent key={movie.id} movie={movie}/>)}</div>
+            <Link href={'/now_playing'} className={style.tytle}>Top Rated</Link>
+            <div className={style.moviesLine}>
+
+                {topRatedMovies.map(movie =>
+                    <MovieComponent key={movie.id} movie={movie}/>)}</div>
+            <Link href={'/now_playing'} className={style.tytle}>Upcoming</Link>
+            <div className={style.moviesLine}>
+                {upcomingMovies.map(movie =>
+                    <MovieComponent key={movie.id} movie={movie}/>)}</div>
         </div>
     );
 }
