@@ -4,13 +4,18 @@ import {MovieComponent} from "@/components/Movies/MovieComponent/MovieComponent"
 import {PaginationsComponent} from "@/components/PaginationsComponent/PaginationsComponent";
 
 import styles from './MoviesComponent.module.css'
+import {useAppSelector} from "@/redux/hook/reduxHooks";
 
 interface IProps {
     movies?:  [] | IMovie[],
 }
 
 const MoviesComponent: FC<IProps> = ({movies}) => {
+// Отримуємо поточну тему з Redux Store
+    const theme = useAppSelector((state) => state.theme.theme);
 
+    // Перевірка, що тема правильно витягується
+    console.log('Current theme:', theme, typeof theme);
     return (
         <div className={styles.wrap}>
         <div className={styles.movies}>

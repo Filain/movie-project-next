@@ -1,0 +1,15 @@
+.image{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease; /* Плавний перехід */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Збільшення зображення при наведенні */
+}
+
+.image:active {
+    transform: scale(0.5); /* Зменшення зображення при натисканні */
+}

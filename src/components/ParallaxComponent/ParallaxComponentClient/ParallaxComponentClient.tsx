@@ -45,6 +45,7 @@ const ParallaxComponentClient: FC<IProps> = ({ nowPlaying }) => {
                         height={500}
                         className={`${styles.image} ${styles.fadeIn}`}
                         key={animationKey}
+                        priority
                     />
                 </div>
             )}
