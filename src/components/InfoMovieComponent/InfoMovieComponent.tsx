@@ -14,6 +14,7 @@ import {CharactersListComponent} from "@/components/CharactersListComponent/Char
 import {trailerService} from "@/services/trailerService";
 import {IVideo} from "@/interfases/trailersInterface";
 import Rating from "@/components/RatingStarComponent/RatingStarComponent";
+import {useAppSelector} from "@/redux/hook/reduxHooks";
 
 
 export default function InfoMovieComponent() {
@@ -21,7 +22,7 @@ export default function InfoMovieComponent() {
     const [characters, setCharacters] = useState<ICast[]>([])
     const [trailers, setTrailers] = useState<IVideo[]>([])
     const teaser = trailers?.filter(item => item.type === 'Teaser' || item.type === 'Trailer')
-
+    const theme = useAppSelector((state) => state.theme.theme);
     console.log(trailers)
 
     const {id} = useParams<{ id: string }>()
@@ -40,7 +41,7 @@ export default function InfoMovieComponent() {
     const teaserKey = trailers.length===0 ? null : teaser[0].key
 
     return (
-        <div className={styles.wrap}>
+        <div className={`${styles.wrap} ${theme}`}>
             <h2 className={styles.header}>{title}</h2>
 
 

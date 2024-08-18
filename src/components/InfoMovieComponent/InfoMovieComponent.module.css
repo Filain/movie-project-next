@@ -1,14 +1,17 @@
 
 .header {
-    font-family: var(--font-header), cursive;
+    font-family: var(--font-header), sans-serif;
     font-size: var(--font-size-header);
+    color: var(--color-text-text-light);
 }
 
 .wrap {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: calc(30px + 20px);;
+    padding-top: calc(30px + 20px);
+    background-color: var(--color-background-light);
+
 
 }
 
@@ -16,6 +19,7 @@
     text-transform: capitalize;
     font-family: var(--font-title), sans-serif;
     font-size: var(--font-size-title);
+    color: var(--color-text-text-light);
     letter-spacing: 2px;
     margin-top: 50px;
     margin-bottom: 15px;
@@ -31,7 +35,7 @@
     font-family: 'Exo 2', sans-serif;
     font-size: var(--font-size-text);
     cursor: pointer;
-    color: black;
+    color: var(--color-text-text-light);
 }
 
 .link:hover {
@@ -42,6 +46,7 @@
 .text {
     font-family: var(--font-text), sans-serif;
     font-size: var(--font-size-text);
+    color: var(--color-text-text-light);
 
 }
 

@@ -1,10 +1,11 @@
 .wrap {
     width: 90px;
-    height: 150px;
+    height: 145px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    margin: 5px;
 }
 
 .image {
@@ -19,6 +20,7 @@
     overflow: hidden; /* Приховує текст, що не вміщується */
     text-overflow: ellipsis; /* Додає трикрапку, якщо текст не вміщується */
     max-width: 100%; /* Максимальна ширина тексту */
+    color: var(--color-text-text-light) ;
 }
 
 .imageNot {

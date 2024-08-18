@@ -1,15 +1,21 @@
+'use client'
 import NavLinkClientComponent from "@/components/HeaderComponent/NavLinkClientComponent/NavLinkClientComponent";
 import Image from "next/image";
 
 import styles from './HeaderComponent.module.css'
+
+
 import Link from "next/link";
 import SearchFormComponent from "@/components/SearchFormComponent/SearchFormComponent";
 import {ThemeSwicherComponent} from "@/components/ThemeSwicherComponent/ThemeSwicherComponent";
+import {useAppSelector} from "@/redux/hook/reduxHooks";
 
 export default function HeaderComponent() {
-
+    const theme = useAppSelector((state) => state.theme.theme);
+    console.log(theme)
     return (
-        <header className={styles.header}>
+        // <header className={styles.header }>
+        <header className={`${styles.header} ${theme}`}>
             <div className={styles.wrap}>
                 <Link href={'/'} className={styles.logo}>MovieD</Link>
                 <nav>

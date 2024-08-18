@@ -1,8 +1,6 @@
 import {homeService} from "@/services/homeService";
-import {MovieComponent} from "@/components/Movies/MovieComponent/MovieComponent";
 
-import style from './page.module.css'
-import Link from "next/link";
+import {HomePageComponent} from "@/components/HomePageComponent/HomePageComponent";
 
 export default async function Home() {
 
@@ -21,24 +19,7 @@ export default async function Home() {
 
 
     return (
-        <div className={style.wrap}>
-            <Link href={'/now_playing'} className={style.tytle}>NowPlaying</Link>
-            <div className={style.moviesLine}>
-                {nowPlayingMovies.map(movie =>
-                    <MovieComponent key={movie.id} movie={movie}/>)}</div>
-            <Link href={'/now_playing'} className={style.tytle}>Popular</Link>
-            <div className={style.moviesLine}>
-                {popularMovies.map(movie =>
-                    <MovieComponent key={movie.id} movie={movie}/>)}</div>
-            <Link href={'/now_playing'} className={style.tytle}>Top Rated</Link>
-            <div className={style.moviesLine}>
+        <HomePageComponent nowPlayingMovies={nowPlayingMovies} popularMovies={popularMovies} topRatedMovies={topRatedMovies} upcomingMovies={upcomingMovies}/>
 
-                {topRatedMovies.map(movie =>
-                    <MovieComponent key={movie.id} movie={movie}/>)}</div>
-            <Link href={'/now_playing'} className={style.tytle}>Upcoming</Link>
-            <div className={style.moviesLine}>
-                {upcomingMovies.map(movie =>
-                    <MovieComponent key={movie.id} movie={movie}/>)}</div>
-        </div>
     );
 }

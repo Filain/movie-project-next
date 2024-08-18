@@ -1,3 +1,5 @@
+'use client'
+
 import {IMovie} from "@/interfases/movieInterface";
 import {FC} from "react";
 import {MovieComponent} from "@/components/Movies/MovieComponent/MovieComponent";
@@ -14,10 +16,8 @@ const MoviesComponent: FC<IProps> = ({movies}) => {
 // Отримуємо поточну тему з Redux Store
     const theme = useAppSelector((state) => state.theme.theme);
 
-    // Перевірка, що тема правильно витягується
-    console.log('Current theme:', theme, typeof theme);
     return (
-        <div className={styles.wrap}>
+        <div className={`${styles.wrap} ${theme}`}>
         <div className={styles.movies}>
             {movies && movies.map(movie => <MovieComponent key={movie.id} movie={movie}/>
             )}

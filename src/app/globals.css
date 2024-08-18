@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -18,8 +19,8 @@
 
   --border-radius: 5px;
 
-   /*fonts*/
-  --font-header: 'Alumni Sans Inline One';
+  /*fonts*/
+  --font-header: 'Roboto';
   --font-title: 'Roboto';
   --font-text: 'Roboto';
   --font-botton: 'Roboto';
@@ -30,7 +31,29 @@
   --font-size-text: 16px;
   --font-size-button: 15px;
 
-  /*light mode*/
+  --mainPageBlock-height: 400px;
+}
+
+.dark {
+  --color-background-light: #1e1f22;
+  --color-text-header-light: #ffffff;
+  --color-title-title-light: #ffffff;
+  --color-text-text-light: #ffffff;
+
+  --color-text-shadow-light: 2px 2px 4px rgba(255, 255, 255, 0.8);
+  --color-text-shadow-dark: 2px 2px 4px rgb(255, 255, 255);
+
+  --color-text-fon-light: rgba(0, 0, 0, 0.71);
+
+  --color-line-light: #ffffff;
+
+  --color-text-button-light: rgb(255, 255, 255);
+  --color-background-button-light: rgb(0, 0, 0);
+
+  --color-background-button-hover-light: #002881;
+}
+
+.light {
   --color-background-light: #FFFFFF;
   --color-text-header-light: #000000;
   --color-title-title-light: #000000;
@@ -47,16 +70,72 @@
   --color-background-button-light: #007bff ;
 
   --color-background-button-hover-light: #0069d9;
-
-  --mainPageBlock-height: 400px;
-
-  /*dark mode*/
-
-  /*button */
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*:root {*/
+/*  --wrap-width: 1440px;*/
+/*  --heder-height: 60px;*/
+/*  --parallax-height: 400px;*/
+/*  --parallax-background-colour:rgba(255, 255, 255, 0.3);*/
+
+
+
+/*  --border-radius: 5px;*/
+
+/*   !*fonts*!*/
+/*  --font-header: 'Alumni Sans Inline One';*/
+/*  --font-title: 'Roboto';*/
+/*  --font-text: 'Roboto';*/
+/*  --font-botton: 'Roboto';*/
+
+
+/*  --font-size-header: 50px;*/
+/*  --font-size-title: 30px;*/
+/*  --font-size-text: 16px;*/
+/*  --font-size-button: 15px;*/
+
+/*  !*light mode*!*/
+/*  --color-background-light: #FFFFFF;*/
+/*  --color-text-header-light: #000000;*/
+/*  --color-title-title-light: #000000;*/
+/*  --color-text-text-light: #000000;*/
+
+/*  --color-text-shadow-light: 2px 2px 4px rgba(255, 255, 255, 0.8);*/
+/*  --color-text-shadow-dark: 2px 2px 4px rgba(0, 0, 0, 0.71);*/
+
+/*  --color-text-fon-light:rgba(255, 255, 255, 0.3);*/
+
+/*  --color-line-light: #000000;*/
+
+/*  --color-text-button-light: white;*/
+/*  --color-background-button-light: #007bff ;*/
+
+/*  --color-background-button-hover-light: #0069d9;*/
+
+/*  --mainPageBlock-height: 400px;*/
+/*  }*/
 
 
 
