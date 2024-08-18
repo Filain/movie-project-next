@@ -21,7 +21,7 @@ const FooterComponent: FC<IProps> = () => {
     return (
   <footer  className={`${styles.footer} ${theme}`}>
       <div className={styles.wrap}>
-          <p>© 2024 Created by Volodymyr Fylypiv</p>
+          <p className={styles.text}>© 2024 Created by Volodymyr Fylypiv</p>
           <div>
           <Image className={styles.image} onClick={() => goYanky('https://github.com/Filain?tab=repositories')}  priority={true}  src={'/images/github.svg'} alt={'github'} width={30} height={30}/>
           <Image className={styles.image} onClick={() => goYanky('https://t.me/fil64')}  priority={true}  src={'/images/telegram.svg'} alt={'telegram'} width={30} height={30}/>

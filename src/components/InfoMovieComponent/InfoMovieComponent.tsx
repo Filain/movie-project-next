@@ -36,7 +36,7 @@ export default function InfoMovieComponent() {
         return <div>Loading...</div>;
     }
 
-    const {title, poster_path, overview, genres, release_date, vote_average, original_title, runtime} = info
+    const {title, poster_path, overview, genres, release_date, vote_average,  runtime} = info
     const teaserKey = trailers.length === 0 ? null : teaser[0].key
 
     return (
@@ -77,7 +77,7 @@ export default function InfoMovieComponent() {
             {teaserKey ? <div>
                 <p className={`${styles.title} ${styles.senter}`}>Teaser</p>
 
-                <iframe width="1430" height="720"
+                <iframe width="720" height="480"
                         src={`https://www.youtube.com/embed/${teaser[0]?.key}`}
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

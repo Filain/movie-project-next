@@ -38,4 +38,10 @@
     transform: scale(0.9); /* Зменшення зображення при натисканні */
 }
 
+.text {
+    font-family: var(--font-text), sans-serif;
+    font-size: var(--font-size-text);
+    color: var(--color-text-button-light);
+}
+
 
