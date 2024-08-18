@@ -13,17 +13,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-
     height: var(--mainPageBlock-height);
-    width: var(--wrap-width);
+    width: calc(var(--wrap-width) - 180px);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-background-button-light);
-
-
-
-
-
 }
 
 .tytle {
@@ -31,7 +24,7 @@
 
     position: relative;
     top: 16px;
-    right: -630px;
+    right: -570px;
 
     font-family: var(--font-botton), sans-serif;
     background-color: var(--color-background-button-light); /* Основний колір кнопки */

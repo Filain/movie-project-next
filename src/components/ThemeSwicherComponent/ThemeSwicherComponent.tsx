@@ -7,7 +7,7 @@ import {useAppDispatch} from "@/redux/hook/reduxHooks";
 import {ETheme, themeActions} from "@/redux/slices/themeSlice";
 
 
-interface IProps extends PropsWithChildren{
+interface IProps extends PropsWithChildren {
 
 }
 
@@ -43,9 +43,11 @@ const ThemeSwicherComponent: FC<IProps> = () => {
     };
     return (
 
-   <Image className={styles.image} onClick={changeTheme} src={theme === ETheme.dark ? '/images/night.svg' : '/images/day.svg'} alt={'theme'} width={30} height={30}/>
+        <Image className={styles.image} onClick={changeTheme}
+               src={theme === ETheme.dark ? '/images/night.svg' : '/images/day.svg'} alt={'theme'} width={30}
+               height={30}/>
 
- );
+    );
 };
 
 export {ThemeSwicherComponent};

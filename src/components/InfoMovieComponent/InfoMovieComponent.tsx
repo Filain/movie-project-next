@@ -23,7 +23,6 @@ export default function InfoMovieComponent() {
     const [trailers, setTrailers] = useState<IVideo[]>([])
     const teaser = trailers?.filter(item => item.type === 'Teaser' || item.type === 'Trailer')
     const theme = useAppSelector((state) => state.theme.theme);
-    console.log(trailers)
 
     const {id} = useParams<{ id: string }>()
 
@@ -38,7 +37,7 @@ export default function InfoMovieComponent() {
     }
 
     const {title, poster_path, overview, genres, release_date, vote_average, original_title, runtime} = info
-    const teaserKey = trailers.length===0 ? null : teaser[0].key
+    const teaserKey = trailers.length === 0 ? null : teaser[0].key
 
     return (
         <div className={`${styles.wrap} ${theme}`}>
@@ -48,7 +47,8 @@ export default function InfoMovieComponent() {
             <div className={styles.block}>
                 <div className={styles.miniBlock}>
                     {poster_path
-                        ?<Image src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} width={600} height={880}/>
+                        ? <Image src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} width={600}
+                                 height={880}/>
                         : <Image src={'/images/notFound.svg'} alt={'Image not found '} width={600} height={880}/>
                     }
 

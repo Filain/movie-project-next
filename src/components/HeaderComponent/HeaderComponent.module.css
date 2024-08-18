@@ -1,6 +1,8 @@
 .header {
     position: fixed; /* Фіксуємо хедер */
-    width: 100%;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 17px);
     height: 60px;
     display: flex;
     justify-content: center;
@@ -10,33 +12,58 @@
     box-sizing: border-box; /* Ураховує padding у висоті */
 }
 
-.wrap{
+.wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: var(--wrap-width);
     padding: 10px;
-    box-sizing: border-box;
-}
-
-.header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header nav ul li {
-    display: inline-block;
-    margin-right: 10px;
 
 }
 
-.logo {
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.link {
+
+    all: unset; /* Скидає всі стилі */
     text-decoration: none;
     font-family: var(--font-botton), sans-serif;
-    font-weight: bold;
     font-size: var(--font-size-button);
     cursor: pointer;
     color: var(--color-text-button-light);
+    overflow: hidden; /* Приховування тексту, що не вміщується */
+    white-space: nowrap; /* Заборона переносу тексту */
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
 
+.active {
+    font-family: var(--font-botton), sans-serif;
+    font-size: var(--font-size-button);
+    text-shadow: var(--color-text-shadow-dark);
+    font-weight: 800;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.image {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Плавний перехід */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Збільшення зображення при наведенні */
+}
+
+.image:active {
+    transform: scale(0.5); /* Зменшення зображення при натисканні */
 }

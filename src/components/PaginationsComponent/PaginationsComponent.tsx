@@ -1,5 +1,5 @@
 'use client'
-import {FC, PropsWithChildren, useCallback} from "react";
+import {FC, PropsWithChildren, useCallback, useEffect} from "react";
 import {usePathname, useRouter, useSearchParams} from "next/navigation";
 
 import styles from './PaginationsComponent.module.css'
@@ -24,10 +24,11 @@ const PaginationsComponent: FC<IProps> = () => {
     )
 
 
-
-    if (!currentPage) {
-        router.push(pathname + '?' + createQueryString('page', '1'))
-    }
+    useEffect(() => {
+        if (!currentPage) {
+            router.push(pathname + '?' + createQueryString('page', '1'));
+        }
+    }, [currentPage, pathname, createQueryString, router]);
 
     const prev = () => {
         router.push(pathname + '?' + createQueryString('page', `${Number(searchParams.get('page')) - 1}`))
@@ -41,7 +42,7 @@ const PaginationsComponent: FC<IProps> = () => {
         <div className={styles.wrap}>
             <button onClick={prev} className={styles.button} disabled={Number(currentPage) <= 1}>PREV</button>
             <p className={styles.page}>{currentPage}</p>
-            <button onClick={next} className={styles.button} disabled={Number(currentPage) >= 500 }>NEXT</button>
+            <button onClick={next} className={styles.button} disabled={Number(currentPage) >= 500}>NEXT</button>
         </div>
     );
 };

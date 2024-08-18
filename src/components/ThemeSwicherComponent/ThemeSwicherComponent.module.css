@@ -1,8 +1,7 @@
-.image{
+.image {
     width: 30px;
     height: 30px;
     cursor: pointer;
-
     transition: transform 0.3s ease; /* Плавний перехід */
 }
 

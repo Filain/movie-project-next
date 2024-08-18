@@ -1,0 +1,41 @@
+.footer {
+    /*width: calc(100vw - 17px);*/
+    /*width: 100%;*/
+
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-background-button-light);
+    box-sizing: border-box; /* Ураховує padding у висоті */
+
+
+
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--wrap-width);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Плавний перехід */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Збільшення зображення при наведенні */
+}
+
+.image:active {
+    transform: scale(0.9); /* Зменшення зображення при натисканні */
+}
+
+

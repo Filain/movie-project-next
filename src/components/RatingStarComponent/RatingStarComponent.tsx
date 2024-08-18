@@ -6,7 +6,7 @@ interface RatingProps {
     rating?: number;
 }
 
-const Rating: FC<RatingProps> = ({rating=0}) => {
+const Rating: FC<RatingProps> = ({rating = 0}) => {
 // Визначаємо кількість повних зірок та половинну зірку
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 >= 0.5;

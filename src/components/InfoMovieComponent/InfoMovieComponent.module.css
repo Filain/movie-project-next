@@ -10,9 +10,7 @@
     align-items: center;
     flex-direction: column;
     padding-top: calc(30px + 20px);
-    background-color: var(--color-background-light);
-
-
+    background-color: var(--color-background);
 }
 
 .title {

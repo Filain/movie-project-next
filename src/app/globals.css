@@ -35,7 +35,7 @@
 }
 
 .dark {
-  --color-background-light: #1e1f22;
+  --color-background: #1e1f22;
   --color-text-header-light: #ffffff;
   --color-title-title-light: #ffffff;
   --color-text-text-light: #ffffff;
@@ -54,7 +54,7 @@
 }
 
 .light {
-  --color-background-light: #FFFFFF;
+  --color-background: #FFFFFF;
   --color-text-header-light: #000000;
   --color-title-title-light: #000000;
   --color-text-text-light: #000000;

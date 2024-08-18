@@ -1,4 +1,4 @@
-.Movie{
+.Movie {
     width: 250px;
     text-align: center;
     margin: 10px;
@@ -36,18 +36,20 @@
     letter-spacing: 0;
 }
 
-.img_poster{
-        border-radius: 5px;
+.img_poster {
+    border-radius: 5px;
 }
 
-.img_poster:focus-visible{
+.img_poster:focus-visible {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
-.img_poster:hover{
+.img_poster:hover {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.6), 0 1px 3px 1px rgba(0, 0, 0, 0.8);
     background-color: rgba(0, 0, 0, 0.3);
 }
-.img_poster:active{
+
+.img_poster:active {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5), 0 1px 3px 1px rgba(0, 0, 0, 0.7);
-    background-color: rgba(0, 0, 0, 0.2) !important;}
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}

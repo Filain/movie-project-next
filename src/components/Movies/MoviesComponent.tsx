@@ -9,7 +9,7 @@ import styles from './MoviesComponent.module.css'
 import {useAppSelector} from "@/redux/hook/reduxHooks";
 
 interface IProps {
-    movies?:  [] | IMovie[],
+    movies?: [] | IMovie[],
 }
 
 const MoviesComponent: FC<IProps> = ({movies}) => {
@@ -18,11 +18,11 @@ const MoviesComponent: FC<IProps> = ({movies}) => {
 
     return (
         <div className={`${styles.wrap} ${theme}`}>
-        <div className={styles.movies}>
-            {movies && movies.map(movie => <MovieComponent key={movie.id} movie={movie}/>
-            )}
+            <div className={styles.movies}>
+                {movies && movies.map(movie => <MovieComponent key={movie.id} movie={movie}/>
+                )}
 
-        </div>
+            </div>
             <PaginationsComponent/>
         </div>
     )

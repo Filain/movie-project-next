@@ -5,7 +5,6 @@
     font-size: var(--font-size-button);
     cursor: pointer;
     color: var(--color-text-button-light);
-
     overflow: hidden; /* Приховування тексту, що не вміщується */
     white-space: nowrap; /* Заборона переносу тексту */
     transition: background-color 0.3s ease; /* Анімація зміни кольору */

@@ -1,7 +1,7 @@
 'use client'
 
-import { FC, PropsWithChildren, useEffect, useState } from "react";
-import { IMovie, INowPlaying } from "@/interfases/movieInterface";
+import {FC, PropsWithChildren, useEffect, useState} from "react";
+import {IMovie, INowPlaying} from "@/interfases/movieInterface";
 import Image from "next/image";
 import styles from './ParallaxComponentClient.module.css';
 
@@ -9,7 +9,7 @@ interface IProps extends PropsWithChildren {
     nowPlaying: INowPlaying;
 }
 
-const ParallaxComponentClient: FC<IProps> = ({ nowPlaying }) => {
+const ParallaxComponentClient: FC<IProps> = ({nowPlaying}) => {
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [posterIndex, setPosterIndex] = useState(0);
     const [animationKey, setAnimationKey] = useState(0); // Додаємо ключ для анімації
@@ -53,4 +53,4 @@ const ParallaxComponentClient: FC<IProps> = ({ nowPlaying }) => {
     );
 };
 
-export { ParallaxComponentClient };
+export {ParallaxComponentClient};

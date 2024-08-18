@@ -4,6 +4,7 @@ import "./globals.css";
 import HeaderComponent from "@/components/HeaderComponent/HeaderComponent";
 import ParallaxComponentServer from "@/components/ParallaxComponent/ParallaxComponentServer";
 import {StoreProvider} from "@/redux/StoreProvider";
+import {FooterComponent} from "@/components/FooterComponent/FooterComponent";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -23,6 +24,7 @@ export default function RootLayout({children,}: Readonly<{
             <HeaderComponent/>
             <ParallaxComponentServer/>
             {children}
+            <FooterComponent/>
             </body>
             </html>
         </StoreProvider>

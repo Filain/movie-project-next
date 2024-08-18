@@ -30,7 +30,7 @@ const NavLinkGenres: FC<IProps> = ({path, children, isActive, onClick}) => {
 
     return (
 
-            <button onClick={genre} className={`${styles.wrap} ${Active ? styles.active : ''}`}>{children} </button>
+        <button onClick={genre} className={`${styles.wrap} ${Active ? styles.active : ''}`}>{children} </button>
 
 
     );

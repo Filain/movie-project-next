@@ -19,7 +19,8 @@ export default async function Home() {
 
 
     return (
-        <HomePageComponent nowPlayingMovies={nowPlayingMovies} popularMovies={popularMovies} topRatedMovies={topRatedMovies} upcomingMovies={upcomingMovies}/>
+        <HomePageComponent nowPlayingMovies={nowPlayingMovies} popularMovies={popularMovies}
+                           topRatedMovies={topRatedMovies} upcomingMovies={upcomingMovies}/>
 
     );
 }

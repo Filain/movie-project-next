@@ -43,7 +43,7 @@
     z-index: 10;
     font-size: var(--font-size-title);
     font-weight: bold;
-    padding: 8px;
+    padding: 22px;
     background-color: var(--parallax-background-colour); /* Легка прозорість фону */
     border-radius: var(--border-radius);
 }
@@ -94,6 +94,7 @@
         transform: scale(1.05); /* Злегка збільшена */
     }
 }
+
 @keyframes fadessInOut {
     0% {
         opacity: 0;
