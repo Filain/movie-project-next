@@ -54,13 +54,13 @@
     flex-direction: row;
     align-items: start;
     flex-wrap: wrap;
-    width: 100%;
+    width: var(--wrap-width);
     padding: 20px;
 }
 
 .miniBlock {
     margin: 0;
-    width: calc(var(--wrap-width) / 2 - 10px);
+    width: calc(var(--wrap-width) / 2 - 30px);
     padding: 10px;
 }
 
