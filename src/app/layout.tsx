@@ -12,6 +12,9 @@ const inter = Inter({subsets: ["latin"]});
 export const metadata: Metadata = {
     title: "Movie",
     description: "Created by Volodymyr Fylypiv ",
+    icons:{
+        icon: "/favicon.ico",
+    },
 };
 
 export default function RootLayout({children,}: Readonly<{
@@ -24,8 +27,11 @@ export default function RootLayout({children,}: Readonly<{
         <body className={inter.className}>
         <HeaderComponent/>
         <ParallaxComponentServer/>
+        <Suspense fallback={<div>Loading...</div>}>
 
                 {children}
+
+        </Suspense>
 
         <FooterComponent/>
         </body>

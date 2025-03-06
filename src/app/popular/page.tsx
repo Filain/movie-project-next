@@ -1,7 +1,7 @@
 'use client'
 
 import MoviesComponent from "@/components/Movies/MoviesComponent";
-import {useEffect, useState} from "react";
+import {Suspense, useEffect, useState} from "react";
 import {IMovie} from "@/interfases/movieInterface";
 import {useSearchParams} from "next/navigation";
 import {homeService} from "@/services/homeService";
@@ -18,9 +18,11 @@ export default function Movie() {
 
 
     return (
-        <div>
-            <MoviesComponent movies={movies}/>
-        </div>
+        <Suspense>
+            <div>
+                {movies ? (<MoviesComponent movies={movies} />) : (<div>Loading movies...</div>)}
+            </div>
+        </Suspense>
     );
 }
 
