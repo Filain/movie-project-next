@@ -6,16 +6,14 @@ import {MovieComponent} from "@/components/Movies/MovieComponent/MovieComponent"
 import {PaginationsComponent} from "@/components/PaginationsComponent/PaginationsComponent";
 
 import styles from './MoviesComponent.module.css'
-import {useAppSelector} from "@/redux/hook/reduxHooks";
+import {useTheme} from "@/theme/useTheme";
 
 interface IProps {
     movies?: [] | IMovie[],
 }
 
 const MoviesComponent: FC<IProps> = ({movies}) => {
-// Отримуємо поточну тему з Redux Store
-    const theme = useAppSelector((state) => state.theme.theme);
-
+    const {theme} = useTheme();
     return (
         <div className={`${styles.wrap} ${theme}`}>
             <div className={movies !== undefined && movies.length <= 10 ? styles.noMovies : styles.movies}>

@@ -2,16 +2,16 @@
 import {FC, PropsWithChildren} from "react";
 
 import styles from './FooterComponent.module.css'
-import {useAppSelector} from "@/redux/hook/reduxHooks";
 import Image from "next/image";
 import {useRouter} from "next/navigation";
+import {useTheme} from "@/theme/useTheme";
 
 interface IProps extends PropsWithChildren{
 
 }
 
 const FooterComponent: FC<IProps> = () => {
-    const theme = useAppSelector((state) => state.theme.theme);
+    const {theme} = useTheme();
     const router = useRouter()
 
     const goYanky = (where: string) => {

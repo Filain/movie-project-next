@@ -5,14 +5,13 @@ import styles from './HeaderComponent.module.css'
 
 import SearchFormComponent from "@/components/SearchFormComponent/SearchFormComponent";
 import {ThemeSwicherComponent} from "@/components/ThemeSwicherComponent/ThemeSwicherComponent";
-import {useAppSelector} from "@/redux/hook/reduxHooks";
 import {usePathname, useRouter} from "next/navigation";
+import {useTheme} from "@/theme/useTheme";
 
 export default function HeaderComponent() {
-    const theme = useAppSelector((state) => state.theme.theme);
     const router = useRouter();
     const pathname = usePathname();
-
+    const {theme} = useTheme();
     const onClick = (path: string) => {
         router.push(path);
     };

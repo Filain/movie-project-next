@@ -3,9 +3,9 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import HeaderComponent from "@/components/HeaderComponent/HeaderComponent";
 import ParallaxComponentServer from "@/components/ParallaxComponent/ParallaxComponentServer";
-import {StoreProvider} from "@/redux/StoreProvider";
 import {FooterComponent} from "@/components/FooterComponent/FooterComponent";
 import {Suspense} from "react";
+import ThemeProvider from "@/theme/ThemeProvider";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -19,7 +19,7 @@ export default function RootLayout({children,}: Readonly<{
 }>) {
 
     return (
-        <StoreProvider>
+        <ThemeProvider>
             <html lang="en">
             <body className={inter.className}>
             <HeaderComponent/>
@@ -30,6 +30,6 @@ export default function RootLayout({children,}: Readonly<{
             <FooterComponent/>
             </body>
             </html>
-        </StoreProvider>
+        </ThemeProvider>
     );
 }

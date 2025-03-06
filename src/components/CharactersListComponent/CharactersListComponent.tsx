@@ -6,7 +6,7 @@ import {poster} from "@/constants/urls";
 import Image from 'next/image';
 
 import styles from './CharactersListComponent.module.css'
-import {useAppSelector} from "@/redux/hook/reduxHooks";
+import {useTheme} from "@/theme/useTheme";
 
 
 interface IProps extends PropsWithChildren {
@@ -14,7 +14,8 @@ interface IProps extends PropsWithChildren {
 }
 
 const CharactersListComponent: FC<IProps> = ({char}) => {
-    const theme = useAppSelector((state) => state.theme.theme);
+    const {theme} = useTheme();
+
     return (
         <div key={char.id} className={`${styles.wrap} ${theme}`}>
             {

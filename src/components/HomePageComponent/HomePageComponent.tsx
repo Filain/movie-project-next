@@ -7,7 +7,7 @@ import {MovieComponent} from "@/components/Movies/MovieComponent/MovieComponent"
 import {IMovie} from "@/interfases/movieInterface";
 
 import style from './HomePageComponent.module.css'
-import {useAppSelector} from "@/redux/hook/reduxHooks";
+import {useTheme} from "@/theme/useTheme";
 
 
 interface IProps extends PropsWithChildren {
@@ -19,7 +19,7 @@ interface IProps extends PropsWithChildren {
 }
 
 const HomePageComponent: FC<IProps> = ({nowPlayingMovies, popularMovies, topRatedMovies, upcomingMovies}) => {
-    const theme = useAppSelector((state) => state.theme.theme);
+    const {theme} = useTheme();
     return (
         <div className={`${style.wrap} ${theme}`}>
             <Link href={'/now_playing'} className={style.tytle}>NowPlaying</Link>

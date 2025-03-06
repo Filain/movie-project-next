@@ -5,8 +5,9 @@ import {IGenreList} from "@/interfases/genresInterface";
 import {FC, PropsWithChildren, useEffect, useState} from "react";
 
 import styles from './GenresListComponents.module.css'
-import {useAppSelector} from "@/redux/hook/reduxHooks";
+
 import {useRouter, useSearchParams} from "next/navigation";
+import {useTheme} from "@/theme/useTheme";
 
 interface IProps extends PropsWithChildren {
     genres: IGenreList
@@ -14,7 +15,7 @@ interface IProps extends PropsWithChildren {
 
 const GenresListComponents: FC<IProps> = ({genres}) => {
     const [activePath, setActivePath] = useState<string | null>(null); // Стейт для збереження активного шляху
-    const theme = useAppSelector((state) => state.theme.theme);
+    const {theme} = useTheme();
     const router = useRouter();
     const searchParams = useSearchParams()
     useEffect(() => {
