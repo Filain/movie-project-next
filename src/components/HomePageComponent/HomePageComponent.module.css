@@ -5,6 +5,8 @@
     align-items: center;
     padding-top: 60px;
     width: 100%; /* Робить контейнер повної ширини */
+    background-color: var(--color-background);
+    /*border: 1px solid #002aff;*/
 
 }
 
