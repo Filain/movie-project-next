@@ -20,16 +20,17 @@ export default function RootLayout({children,}: Readonly<{
 
     return (
         <ThemeProvider>
-            <html lang="en">
-            <body className={inter.className}>
-            <HeaderComponent/>
-            <ParallaxComponentServer/>
-            <Suspense fallback={<div>Loading...</div>}>
-            {children}
-            </Suspense>
-            <FooterComponent/>
-            </body>
-            </html>
+        <html lang="en">
+        <body className={inter.className}>
+        <HeaderComponent/>
+        <ParallaxComponentServer/>
+
+                {children}
+
+        <FooterComponent/>
+        </body>
+        </html>
         </ThemeProvider>
+
     );
 }

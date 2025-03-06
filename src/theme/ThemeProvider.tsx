@@ -1,14 +1,24 @@
+'use client'
 import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext} from "@/theme/ThemeContext";
-import React, {FC, useMemo, useState} from "react";
+import React, {FC, useEffect, useMemo, useState} from "react";
 
-const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
+
 
 interface ThemeProviderProps {
     children: React.ReactNode;
 }
 
 const ThemeProvider: FC<ThemeProviderProps> = ({children}) => {
-    const [theme, setTheme] = useState<Theme>(defaultTheme);
+    const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
+
+    useEffect(() => {
+        const storedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme;
+        if (storedTheme) {
+            setTheme(storedTheme);
+        }
+    }, []);
+
+
 
     const defaultProps = useMemo(() => ({
         theme: theme,

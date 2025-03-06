@@ -21,7 +21,8 @@ const MoviesComponent: FC<IProps> = ({movies}) => {
                 )}
 
             </div>
-            <PaginationsComponent/>
+             <PaginationsComponent />
+
         </div>
     )
 }

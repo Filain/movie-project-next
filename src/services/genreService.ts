@@ -25,7 +25,7 @@ const genreService = {
             throw new Error("An unknown error occurred");
         }
     },
-    getMoviesByGenre: async (page: string, with_genres: string): Promise<IData> => {
+    getMoviesByGenre: async (page: string, with_genres: string |null): Promise<IData> => {
         try {
             const res = await fetch(`${urls.movies}?page=${page}&with_genres=${with_genres}`, options)
             return res.json()

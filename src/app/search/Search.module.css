@@ -1,0 +1,4 @@
+ .textBlock {
+     height: calc(100vh - 520px);
+     background-color: var(--color-background);
+ }

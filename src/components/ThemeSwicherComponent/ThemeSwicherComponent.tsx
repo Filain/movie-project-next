@@ -8,6 +8,7 @@ import {useTheme} from "@/theme/useTheme";
 import {Theme} from "@/theme/ThemeContext";
 
 
+
 interface IProps extends PropsWithChildren {
 
 }
@@ -15,6 +16,7 @@ interface IProps extends PropsWithChildren {
 const ThemeSwicherComponent: FC<IProps> = () => {
 
     const {theme, toggleTheme} = useTheme();
+    console.log(theme)
 
 
     return (

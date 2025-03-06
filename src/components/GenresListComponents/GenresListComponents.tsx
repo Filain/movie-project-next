@@ -6,7 +6,7 @@ import {FC, PropsWithChildren, useEffect, useState} from "react";
 
 import styles from './GenresListComponents.module.css'
 
-import {useRouter, useSearchParams} from "next/navigation";
+
 import {useTheme} from "@/theme/useTheme";
 
 interface IProps extends PropsWithChildren {
@@ -14,15 +14,10 @@ interface IProps extends PropsWithChildren {
 }
 
 const GenresListComponents: FC<IProps> = ({genres}) => {
-    const [activePath, setActivePath] = useState<string | null>(null); // Стейт для збереження активного шляху
+    const [activePath, setActivePath] = useState<string | null>('28');
+    console.log(activePath)
     const {theme} = useTheme();
-    const router = useRouter();
-    const searchParams = useSearchParams()
-    useEffect(() => {
-        const query = new URLSearchParams(searchParams.toString());
-        query.set("genreId", String(genres.genres[0].id));
-        router.push(`?${query.toString()}`);
-    }, [genres.genres, router, searchParams]);
+
     return (
 
         <div className={`${styles.genreList} ${theme}`}>
