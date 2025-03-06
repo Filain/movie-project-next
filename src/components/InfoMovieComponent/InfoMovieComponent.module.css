@@ -50,11 +50,11 @@
 
 .block {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     flex-wrap: wrap;
-    width: var(--wrap-width);
+    max-width: var(--wrap-width);
     padding: 20px;
 }
 

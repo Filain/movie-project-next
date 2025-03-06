@@ -11,7 +11,6 @@ export default async function Genres() {
     return (
         <div>
             <GenresListComponents genres={genres}/>
-
             <GenreMovieComponent/>
         </div>
     );

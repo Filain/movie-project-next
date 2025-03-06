@@ -18,7 +18,7 @@ const MoviesComponent: FC<IProps> = ({movies}) => {
 
     return (
         <div className={`${styles.wrap} ${theme}`}>
-            <div className={styles.movies}>
+            <div className={movies !== undefined && movies.length <= 10 ? styles.noMovies : styles.movies}>
                 {movies && movies.map(movie => <MovieComponent key={movie.id} movie={movie}/>
                 )}
 

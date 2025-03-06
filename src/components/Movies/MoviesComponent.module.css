@@ -21,7 +21,9 @@
     align-items: flex-start;
     max-width: var(--wrap-width);
     overflow: hidden;
-    /*height: calc(100vh - 60px - 600px);*/
+    /*height: calc(100vh - 30px - 600px);*/
+}
 
-
+.noMovies {
+    height: calc(100vh -  580px);
 }
