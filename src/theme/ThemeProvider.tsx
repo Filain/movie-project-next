@@ -9,7 +9,7 @@ interface ThemeProviderProps {
 }
 
 const ThemeProvider: FC<ThemeProviderProps> = ({children}) => {
-    const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
+    const [theme, setTheme] = useState<Theme>(Theme.DARK);
 
     useEffect(() => {
         const storedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme;
